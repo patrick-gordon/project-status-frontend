@@ -1,5 +1,5 @@
 import React from 'react'
-import AddProject from './AddProject'
+import AddProject from './Projects/AddProject'
 
 export default function HomePage() {
     return (
