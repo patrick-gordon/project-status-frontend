@@ -1,0 +1,36 @@
+.navigation-container{
+  border: 3px solid black;
+}
+
+.navbar-main {
+    background-color: #e7c9a9;
+}
+
+.navbar-brand {
+    margin-left: 20rem;
+    font-size: 38px;
+    color: black
+}
+
+.navbar-nav {
+    margin-left: 13rem;
+    align-items: center;
+}
+
+.navbar-link {
+    margin-left: 4rem;
+    font-size: 28px;
+    color: black
+}
+
+
+.navbar-newProject-button {
+    margin-left: 12rem;
+    align-items: center;
+    font-size: 28px;
+
+}
+
+.navbar-profile-icon {
+    margin-left: 12rem;
+}

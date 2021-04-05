@@ -1,10 +1,13 @@
 import React from 'react'
 import './App.css';
+
 import { BrowserRouter as Router, Switch, Link, Route} from 'react-router-dom'
-import HomePage from './components/HomePage';
+
 import Navigation from './components/Nav/Navigation';
 import SideNav from './components/Nav/SideNav';
-import AddProject from './components/Projects/AddProject';
+import Login from './components/Auth/Login';
+import Register from './components/Auth/Register';
+import HomePage from './components/HomePage';
 
 function App() {
   return (
@@ -13,9 +16,9 @@ function App() {
      <Router>
       <SideNav />
        <Switch>
-        {/* <Route exact path='/' component={} /> */}
-         <Route exact path='/new-project' component={AddProject} />
-
+        {/* <Route exact path='/' component={Login} /> */}
+        {/* <Route path='/register' component={Register} /> */}
+        {/* <Route path='/home' component={HomePage} /> */}
        </Switch>
      </Router>
     </div>

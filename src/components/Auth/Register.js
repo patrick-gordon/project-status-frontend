@@ -40,7 +40,7 @@ export default function Register() {
             </InputGroup>
             <Button onClick={register}>Login</Button>
             <p><Link to='/register' />Sign up here</p>
-            {loginStatus && <p>{loginStatus}</p>}
+            {signupStatus && <p>{signupStatus}</p>}
         </Container>
     )
 }
