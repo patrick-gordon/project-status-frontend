@@ -1,35 +1,44 @@
 .navigation-container{
+    border: 5px solid red
 }
 
 .navbar-main {
     background-color: #e7c9a9;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .navbar-brand {
-    margin-left: 20rem;
+    /* margin-left: 20rem; */
     font-size: 38px;
-    color: black
+    color: black;
+    border: 1px solid black;
+
 }
 
 .navbar-nav {
-    margin-left: 13rem;
+    /* margin-left: 13rem; */
     align-items: center;
 }
 
 .navbar-link {
-    margin-left: 4rem;
+    /* margin-left: 4rem; */
     font-size: 28px;
-    color: black
+    color: black;
+    border: 1px solid black;
+
 }
 
 
 .navbar-newProject-button {
-    margin-left: 12rem;
+    /* margin-left: 12rem; */
     align-items: center;
     font-size: 28px;
-
+    border: 1px solid black;
 }
 
 .navbar-profile-icon {
-    margin-left: 12rem;
+    /* margin-left: 12rem; */
+    border: 1px solid black;
 }

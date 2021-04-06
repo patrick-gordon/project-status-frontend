@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { BrowserRouter as Router, Link, useHistory } from 'react-router-dom';
 
 import { Container } from 'reactstrap';
 import * as FaIcons from 'react-icons/fa';
@@ -35,6 +35,7 @@ export default function SideNav() {
   return (
     <>
       {/* <Container> */}
+      <Router>
       <div className='navbar-sidenav'>
         <Link to='#' className='menu-bars'>
           <FaIcons.FaBars onClick={showSidebar} />
@@ -69,6 +70,7 @@ export default function SideNav() {
           })} */}
         </ul>
       </nav>
+      </Router>
       {/* </Container> */}
     </>
   );
