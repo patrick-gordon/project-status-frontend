@@ -16,8 +16,8 @@ function App() {
         <Router>
           {/* <SideNav /> */}
           <Switch>
-            {/* <Route exact path='/' component={Login} /> */}
-            {/* <Route path='/register' component={Register} /> */}
+            <Route exact path='/' component={Login} />
+            <Route path='/register' component={Register} />
             {/* <Route path='/home' component={HomePage} /> */}
           </Switch>
       </Router>

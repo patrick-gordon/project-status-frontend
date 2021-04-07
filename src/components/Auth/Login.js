@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom'
 import {Link} from 'react-router-dom'
 
 import { Container, Button, Input, InputGroup } from 'reactstrap';
+import './Login.css'
 
 export default function Login() {
     let history = useHistory()
@@ -38,14 +39,14 @@ export default function Login() {
             })
     }
     return (
-        <Container>
+        <Container className='login-container'>
             <h2>Log in to create and save your projects</h2>
-            <InputGroup>
-                <Input placeholder='username' onChange={handleChange} type='username' name='username'  />
-                <Input placeholder='password' onChange={handleChange} type='password' name='password'  />
+            <InputGroup className='login-inputgroup'>
+                <Input className='login-username-input' placeholder='username' onChange={handleChange} type='username' name='username'  />
+                <Input className='login-password-input' placeholder='password' onChange={handleChange} type='password' name='password'  />
             </InputGroup>
             <Button onClick={login}>Login</Button>
-            <p><Link to='/register' />Sign up here</p>
+            <p><Link to='/register'>Sign up here</Link></p>
             {loginStatus && <p>{loginStatus}</p>}
         </Container>
     )

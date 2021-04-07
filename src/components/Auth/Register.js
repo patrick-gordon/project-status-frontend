@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom'
 import {Link} from 'react-router-dom'
 
 import { Container, Button, Input, InputGroup } from 'reactstrap';
+import './Register.css'
 
 export default function Register() {
     let history = useHistory()
@@ -32,14 +33,14 @@ export default function Register() {
             })
     }
     return (
-        <Container>
+        <Container className='register-container'>
             <h2>Sign up to create and save your projects</h2>
-            <InputGroup>
+            <InputGroup className='register-inputgroup'>
                 <Input placeholder='username' onChange={handleChange} type='username' name='username'  />
                 <Input placeholder='password' onChange={handleChange} type='password' name='password'  />
             </InputGroup>
-            <Button onClick={register}>Login</Button>
-            <p><Link to='/register' />Sign up here</p>
+            <Button className='register-button' onClick={register}>Login</Button>
+            <p><Link to='/register'>Sign up here</Link></p>
             {signupStatus && <p>{signupStatus}</p>}
         </Container>
     )

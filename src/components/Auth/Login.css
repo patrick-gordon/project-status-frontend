@@ -1,0 +1,21 @@
+.login-container {
+    /* display: flex;
+    flex-direction: column; */
+    border: 1px solid black;
+    margin-top: 10rem
+}
+
+.login-inputgroup {
+    
+    
+}
+
+.login-username-input {
+    width: 10rem;
+    border: 1px solid blue;
+}
+
+.login-password-input {
+    size: 50;
+
+}
