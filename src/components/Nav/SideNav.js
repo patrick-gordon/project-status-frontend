@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Link, useHistory } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Link, useHistory } from "react-router-dom";
 
-import { Container } from 'reactstrap';
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
-import axios from 'axios';
-import ListGroup from 'reactstrap/lib/ListGroup';
-import ListGroupItem from 'reactstrap/lib/ListGroupItem';
-import './SideNav.css'
+import axios from "axios";
+
+import { Container, ListGroup, ListGroupItem } from "reactstrap";
+import * as FaIcons from "react-icons/fa";
+import * as AiIcons from "react-icons/ai";
+import "./SideNav.css";
 
 export default function SideNav() {
-  const history = useHistory()
+  const history = useHistory();
   const [projectList, setProjectList] = useState([]);
   const [sidebar, setSidebar] = useState(false);
 
@@ -18,7 +17,7 @@ export default function SideNav() {
 
   const fetchData = () => {
     axios
-      .get('')
+      .get("")
       .then((res) => {
         console.log(res);
         setProjectList(res.data);
@@ -36,24 +35,24 @@ export default function SideNav() {
     <>
       {/* <Container> */}
       <Router>
-      <div className='navbar-sidenav'>
-        <Link to='#' className='menu-bars'>
-          <FaIcons.FaBars onClick={showSidebar} />
-        </Link>
-      </div>
-      <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
-        <ul className='nav-menu-items'>
-          <li className='navbar-toggle'>
-            <Link to='#' className='menu-bars' onClick={showSidebar}>
-              <AiIcons.AiOutlineClose />
-            </Link>
-          </li>
-        <input
-          placeholder='Search Projects'
-          className='nav-menu-search-input'
-          type='text'
-        />
-          {/* {projectList.map(project => {
+        <div className="navbar-sidenav">
+          <Link to="#" className="menu-bars">
+            <FaIcons.FaBars onClick={showSidebar} />
+          </Link>
+        </div>
+        <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
+          <ul className="nav-menu-items">
+            <li className="navbar-toggle">
+              <Link to="#" className="menu-bars" onClick={showSidebar}>
+                <AiIcons.AiOutlineClose />
+              </Link>
+            </li>
+            <input
+              placeholder="Search Projects"
+              className="nav-menu-search-input"
+              type="text"
+            />
+            {/* {projectList.map(project => {
             return(
               <ListGroup key={project.id}>
                 <span
@@ -68,8 +67,8 @@ export default function SideNav() {
               </ListGroup>
             )
           })} */}
-        </ul>
-      </nav>
+          </ul>
+        </nav>
       </Router>
       {/* </Container> */}
     </>
