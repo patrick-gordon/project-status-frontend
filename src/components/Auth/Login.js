@@ -21,8 +21,9 @@ export default function Login() {
       .post("")
       .then((res) => {
         console.log(res.data);
-        localStorage.setItem("token", res.data.token);
+        localStorage.setItem("token", res.data.token); // need to store to pass to Navigation to conditionally render based on if user is logged in/logged out
         localStorage.setItem("userId", res.data.user.id);
+        setLoginStatus("Success")
         setCreds({
           username: "",
           password: "",
